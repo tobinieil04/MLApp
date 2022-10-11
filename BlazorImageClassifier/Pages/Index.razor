@@ -1,0 +1,39 @@
+﻿@page "/"
+@inject HttpClient client
+
+<PageTitle>Index</PageTitle>
+
+
+
+<img src="@imageName" width="300" height="300"/>
+
+<input type="image" src="@imageName" />
+
+
+<p>@Prediction</p>
+
+
+
+
+
+
+
+@code {
+
+    public string Prediction { get; set; }
+
+    public string imageName = "";
+
+
+    private async Task Upload(string imagePath)
+    {
+        imagePath = imageName;
+        var response = client.PostAsJsonAsync("/predict", imagePath);
+        if (response.IsCompleted)
+        {
+            Prediction = await client.GetFromJsonAsync<string>("/predict");
+        }
+    }
+
+}
+
