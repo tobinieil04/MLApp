@@ -14,9 +14,9 @@ while (true)
         {
             ImageSource = file
         };
-            var predictionResult = ClassificationModel.Predict(sampleData);
+        var predictionResult = ClassificationModel.Predict(sampleData);
         Console.Clear();
-        Console.WriteLine($"\n\nPredicted Label value: {predictionResult.PredictedLabel} \nPredicted score Dog: {Convert.ToDecimal(predictionResult.Score[0] * 100).ToString("0.00")}%\nPredicted score Cat: {Convert.ToDecimal(predictionResult.Score[1] * 100).ToString("0.00")}%\n\n");
+        Console.WriteLine($"\n\nPredicted Label value: {predictionResult.PredictedLabel} \nPredicted score Dog: {Math.Round(predictionResult.Score[0] * 100, 2)}%\nPredicted score Cat: {Math.Round(predictionResult.Score[1] * 100, 2)}%\n\n");
         Console.ReadKey();
     }
     catch (Exception)

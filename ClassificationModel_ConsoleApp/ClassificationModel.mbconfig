@@ -4,7 +4,7 @@
   "DataSource": {
     "Type": "Folder",
     "Version": 1,
-    "FolderPath": "C:\\Users\\tobin\\Downloads\\archive (2)\\dataset\\training_set"
+    "FolderPath": "C:\\Users\\tobin\\OneDrive\\Skrivebord\\Dogs and cats\\dataset\\training_set"
   },
   "Environment": {
     "Type": "LocalCPU",
@@ -18,8 +18,8 @@
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "DNN + ResNet50",
-        "Score": 0.99518072289156623,
-        "RuntimeInSeconds": 1461.5980224609375
+        "Score": 0.9927710843373494,
+        "RuntimeInSeconds": 1381.635986328125
       }
     ],
     "Pipeline": {
